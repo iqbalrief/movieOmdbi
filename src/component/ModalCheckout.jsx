@@ -17,9 +17,6 @@ function ModalCheckout({ closeModal }) {
     
   };
 
-  const openModal = () => {
-    setModalOpen(true);
-  };
   return (
     <>
   <style
@@ -28,14 +25,7 @@ function ModalCheckout({ closeModal }) {
         "\n\t\t.animated {\n\t\t\t-webkit-animation-duration: 1s;\n\t\t\tanimation-duration: 1s;\n\t\t\t-webkit-animation-fill-mode: both;\n\t\t\tanimation-fill-mode: both;\n\t\t}\n\n\t\t.animated.faster {\n\t\t\t-webkit-animation-duration: 500ms;\n\t\t\tanimation-duration: 500ms;\n\t\t}\n\n\t\t.fadeIn {\n\t\t\t-webkit-animation-name: fadeIn;\n\t\t\tanimation-name: fadeIn;\n\t\t}\n\n\t\t.fadeOut {\n\t\t\t-webkit-animation-name: fadeOut;\n\t\t\tanimation-name: fadeOut;\n\t\t}\n\n\t\t@keyframes fadeIn {\n\t\t\tfrom {\n\t\t\t\topacity: 0;\n\t\t\t}\n\n\t\t\tto {\n\t\t\t\topacity: 1;\n\t\t\t}\n\t\t}\n\n\t\t@keyframes fadeOut {\n\t\t\tfrom {\n\t\t\t\topacity: 1;\n\t\t\t}\n\n\t\t\tto {\n\t\t\t\topacity: 0;\n\t\t\t}\n\t\t}\n\t"
     }}
   />
-  <div>
-    <button
-      onClick={openModal}
-      className="bg-blue-500 text-white p-2 rounded text-2xl font-bold"
-    >
-      Open Modal
-    </button>
-  </div>
+ 
   <div
     className="main-modal fixed w-full h-100 inset-0 z-50 overflow-hidden flex justify-center items-center animated fadeIn faster"
     style={{ background: "rgba(0,0,0,.7)" }}
