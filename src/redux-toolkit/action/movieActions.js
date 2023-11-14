@@ -12,7 +12,7 @@ const initialRandomPrice = getRandomPrice();
 export const fetchMovies = createAsyncThunk('movies/fetchMovies', async ({ searchTerm, page }) => {
   try {
     
-    const response = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}&page=${page}&type=movie`);
+    const response = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchTerm}&page=${page}&type=movie`);
     
     
     const moviesWithRandomPrice = response.data.Search.map((movie) => ({
@@ -30,7 +30,7 @@ export const fetchMovies = createAsyncThunk('movies/fetchMovies', async ({ searc
 export const fetchMovieDetail = createAsyncThunk('movies/fetchMovieDetail', async (imdbId) => {
     try {
       
-      const response = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&i=${imdbId}`);
+      const response = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&i=${imdbId}`);
   
       
     
